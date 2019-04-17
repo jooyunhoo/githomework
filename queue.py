@@ -1,15 +1,13 @@
-import sys
-
 class Queue:
-    def __init__(self):
+    def __init__(self, _max):
         self.items = []
-        self.max = max
+        self.max = _max
 
     def size(self):
         return len(self.items)
     
-    def isFull(self, max = 5):
-        if self.size == max:
+    def isFull(self):
+        if self.size == self.max:
             return False
         else:
             return True
